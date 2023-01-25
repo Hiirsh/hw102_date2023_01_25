@@ -1,16 +1,19 @@
 class Employee extends Person {
-  constructor(id, firstName, lastName, birthDate, salary) {
-      super(id, firstName, lastName, birthDate)
-      this._salary = salary
-  }
+    constructor(id, firstName, lastName, birthDate, salary) {
+        super(id, firstName, lastName, birthDate)
+        this._salary = salary
+    }
 
-  get salary() {
-      return this._salary
-  }
+    get salary() {
+        return this._salary
+    }
 
-  set salary(value) {
-      if (value > this._salary) {
-          this._salary = value
-      }
-  }
+    set salary(value) {
+        if (value > this._salary) {
+            this._salary = value
+        }
+    }
+    get info() {
+        return `${this.firstName} ${this.lastName}, age - ${this.age}, salary - ${this.salary}`
+    }
 }

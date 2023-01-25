@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>JS Advanced</title>
-    <script src="./Person.js"></script>
-    <script src="./Employee.js"></script>
-    <script src="./Company.js"></script>
-    <script src="./scrypt.js"></script>
+    <title>Persons</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./Person.js" defer></script>
+    <script src="./Employee.js" defer></script>
+    <script src="./Company.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
+
 <body>
+    <form id="personForm">
+        <label>ID:
+            <input type="text" id="personId">
+        </label>
+        <label>First name:
+            <input type="text" id="firstName">
+        </label>
+        <label>Last name:
+            <input type="text" id="lastName">
+        </label>
+        <label>Birth date:
+            <input type="date" min="0" id="age">
+        </label>
+        <label>Salary:
+            <input type="number" id="salary">
+        </label>
+        <button id="addPerson" type="submit">Add employee</button>
+    </form>
+    <button id="showEmployees">Show employes</button>
+    <button id="calcStats">Get stats</button>
+    <div>
+        <h2>Stats</h2>
+    </div>
+    <div id="stats">
+    </div>
+    <div>
+        <h2>Persons</h2>
+        <ol id="employeesList"></ol>
+    </div>
 
 </body>
+
 </html>
