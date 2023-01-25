@@ -88,15 +88,13 @@ function printStats(company) {
     if (company.getEmployees().length) {
         const companyStats = company.getStatistics()
         const divStats = document.createElement('div')
-        const statsElements = []
-        statsElements[0] = createInfoElement(`Average age: ${companyStats.avAge}`, 'h3');
-        statsElements[1] = createInfoElement(`Min age: ${companyStats.minAge}`, 'h3');
-        statsElements[2] = createInfoElement(`Max age: ${companyStats.maxAge}`, 'h3');
-        statsElements[3] = createInfoElement(`Average salary: ${companyStats.avSalary}`, 'h3');
-        statsElements[4] = createInfoElement(`Min salary: ${companyStats.minSalary}`, 'h3');
-        statsElements[5] = createInfoElement(`Max salary: ${companyStats.maxSalary}`, 'h3');
         divStats.append(
-            ...statsElements
+            createInfoElement(`Average age: ${companyStats.avAge}`, 'h3'),
+            createInfoElement(`Min age: ${companyStats.minAge}`, 'h3'),
+            createInfoElement(`Max age: ${companyStats.maxAge}`, 'h3'),
+            createInfoElement(`Average salary: ${companyStats.avSalary}`, 'h3'),
+            createInfoElement(`Min salary: ${companyStats.minSalary}`, 'h3'),
+            createInfoElement(`Max salary: ${companyStats.maxSalary}`, 'h3')
         );
         if (stats.firstElementChild) {
             stats.replaceChild(divStats, stats.firstElementChild);
