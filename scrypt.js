@@ -1,0 +1,7 @@
+const firm = new Company()
+firm.addEmployee(new Employee(2000, 'Peter', 'Jackson', '2001-05-19', 10000))
+firm.addEmployee(new Employee(3000, 'Mary', 'Smith', '2003-08-08', 20000))
+firm.addEmployee(new Employee(4000, 'John', 'Doe', '1990-02-03', 30000))
+console.log(`Total salary -> ${firm.totalSalary()}`)
+console.log(`Average salary -> ${firm.avSalary()}`)
+console.log(`Average age -> ${firm.avAge()}`)
